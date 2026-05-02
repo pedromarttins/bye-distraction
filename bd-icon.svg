@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <!-- Círculo verde preenchido (base do símbolo de bloqueio) -->
+  <circle cx="128" cy="128" r="122" fill="url(#g)"/>
+  <!-- Borda sutil para profundidade -->
+  <circle cx="128" cy="128" r="122" fill="none" stroke="#0f7a30" stroke-width="6"/>
+  <!-- Anel branco interno (o "O" do símbolo ⊘) -->
+  <circle cx="128" cy="128" r="80" fill="none" stroke="white" stroke-width="28"/>
+  <!-- Traço diagonal branco -->
+  <line x1="72" y1="72" x2="184" y2="184" stroke="white" stroke-width="28" stroke-linecap="round"/>
+</svg>

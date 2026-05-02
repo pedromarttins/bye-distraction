@@ -1,0 +1,14 @@
+{
+  "name": "bye-distraction",
+  "version": "1.0.0",
+  "description": "Block distracting websites",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.5"
+  }
+}

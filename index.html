@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Bye Distraction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-app-bar">
+      <div class="brand-mark" aria-hidden="true">BD</div>
+      <div class="title-group">
+        <h1>Bye Distraction</h1>
+        <span>Controle local de foco</span>
+      </div>
+    </header>
+
+    <main class="app">
+      <section class="control-card">
+        <div class="control-main">
+          <span id="status-dot" class="status-dot inactive" aria-hidden="true"></span>
+          <div>
+            <p class="section-label">Estado atual</p>
+            <strong id="status-title">Bloqueio inativo</strong>
+            <span id="site-count">0 sites na lista</span>
+          </div>
+        </div>
+        <button id="toggle-btn" class="toggle-btn inactive" type="button">Ativar Bloqueio</button>
+      </section>
+
+      <section class="add-card">
+        <div class="outlined-field">
+          <input id="site-input" type="text" placeholder=" " autocomplete="off" spellcheck="false" />
+          <label for="site-input">Domínio</label>
+        </div>
+        <button id="add-btn" class="filled-button" type="button">
+          <span aria-hidden="true">+</span>
+          Adicionar
+        </button>
+      </section>
+
+      <section class="settings-card">
+        <div class="settings-copy">
+          <p class="section-label">Configurações</p>
+          <strong>Persistir bloqueios após fechamento</strong>
+          <span>Quando desligado, sair pelo tray desfaz as mudanças aplicadas.</span>
+        </div>
+        <label class="switch">
+          <input id="persist-toggle" type="checkbox" />
+          <span class="switch-track">
+            <span class="switch-thumb"></span>
+          </span>
+        </label>
+      </section>
+
+      <section class="list-card">
+        <div class="list-header">
+          <div>
+            <p class="section-label">Lista</p>
+            <h2>Sites bloqueados</h2>
+          </div>
+          <span id="list-chip" class="list-chip">Vazia</span>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">+</div>
+          <strong>Nenhum domínio adicionado</strong>
+          <span>Adicione um site para preparar sua lista de bloqueio.</span>
+        </div>
+
+        <ul id="site-list"></ul>
+      </section>
+    </main>
+
+    <div id="loading-overlay" class="loading-overlay hidden">
+      <div class="loading-box">
+        <div class="spinner"></div>
+        <span id="loading-msg">Aplicando...</span>
+      </div>
+    </div>
+
+    <div id="edit-modal" class="modal hidden">
+      <div class="modal-box">
+        <div>
+          <p class="section-label">Editar</p>
+          <h2>Domínio bloqueado</h2>
+        </div>
+        <div class="outlined-field">
+          <input id="edit-input" type="text" placeholder=" " />
+          <label for="edit-input">Domínio</label>
+        </div>
+        <div class="modal-actions">
+          <button id="edit-cancel" class="text-button" type="button">Cancelar</button>
+          <button id="edit-confirm" class="filled-button" type="button">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
