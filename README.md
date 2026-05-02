@@ -13,6 +13,9 @@ A lightweight, system-level website blocker for Windows that helps you maintain 
 - **DoH protection** — Blocks DNS-over-HTTPS to prevent circumventing local DNS
 - **Portable** — Available as standalone .exe or source code
 
+![front image](https://raw.githubusercontent.com/pedromarttins/bye-distraction/refs/heads/main/front.png)
+
+
 ## Technologies
 
 - **[Electron](https://www.electronjs.org/)** — Cross-platform desktop application framework
